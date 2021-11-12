@@ -12,6 +12,12 @@ class Register extends Component {
         formData: {
             firstName: "",
             lastName: "",
+            phoneNumber: "",
+            streetAddress1: "",
+            streetAddress2: "",
+            city: "",
+            state: "",
+            zip: "",
             email: "",
             password: ""
         }
