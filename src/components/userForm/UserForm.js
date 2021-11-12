@@ -16,6 +16,30 @@ function UserForm({ handleChange, handleSubmit, formData, isUpdate }) {
                     <Form.Label><strong>Last Name:</strong></Form.Label>
                     <Form.Control required minLength="2" onChange={handleChange} value={formData.lastName} type="text" placeholder="Last Name" />
                 </Form.Group>
+                <Form.Group controlId="phoneNumber">
+                    <Form.Label><strong>Phone Number:</strong></Form.Label>
+                    <Form.Control required minLength="10" onChange={handleChange} value={formData.phoneNumber} type="text" placeholder="Phone Number" />
+                </Form.Group>
+                <Form.Group controlId="streetAddress1">
+                    <Form.Label><strong>Street Address1:</strong></Form.Label>
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.streetAddress1} type="text" placeholder="Street Address1" />
+                </Form.Group>
+                <Form.Group controlId="streetAddress2">
+                    <Form.Label><strong>Street Address2:</strong></Form.Label>
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.streeAddress2} type="text" placeholder="Stree Address2" />
+                </Form.Group>
+                <Form.Group controlId="city">
+                    <Form.Label><strong>City:</strong></Form.Label>
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.city} type="text" placeholder="City" />
+                </Form.Group>
+                <Form.Group controlId="state">
+                    <Form.Label><strong>State:</strong></Form.Label>
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.State} type="text" placeholder="State" />
+                </Form.Group>
+                <Form.Group controlId="zip">
+                    <Form.Label><strong>Zip:</strong></Form.Label>
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.Zip} type="text" placeholder="Zip" />
+                    </Form.Group>
                 <Form.Group controlId="email">
                     <Form.Label><strong>E-mail:</strong></Form.Label>
                     <Form.Control required onChange={handleChange} value={formData.email} type="email" placeholder="Email" {...(isUpdate && {disabled:true})} />
