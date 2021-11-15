@@ -29,8 +29,11 @@ function UserNav(props) {
       <Navbar.Text className="font-weight-bold mx-3">
         Welcome, Guest
       </Navbar.Text>
+      <Nav.Link as={Link} to="/home" href="/home">Home</Nav.Link>
       <Nav.Link as={Link} to="/login" href="/login">Sign in</Nav.Link>
       <Nav.Link as={Link} to="/register" href="/register">Register</Nav.Link>
+      <Nav.Link as={Link} to="/services" href="/services">Service Offerings</Nav.Link>
+      <Nav.Link as={Link} to="/appointment" href="/appointment">Schedule an Appointment</Nav.Link>
     </>
   )
   if (props.isAuthenticated) {
