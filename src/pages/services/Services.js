@@ -1,12 +1,12 @@
 import Header from "../../components/header/Header";
-import GridCards from "../../components/gridcards/GridCards";
+import ServicesGridCards from "../../components/servicesGridcards/ServicesGridCards";
 import Footer from "../../components/footer/Footer";
 
 function Services(props) {
   return (
     <div className="Services">
         <Header/>
-        <GridCards/>
+        <ServicesGridCards/>
         <Footer/>
     </div>
   );
