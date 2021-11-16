@@ -8,34 +8,31 @@ function Slideshow(props) {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="http://via.placeholder.com/800x400"
+                        src="/images/pawshDog.png" heigth="50" width="100"
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h5>Pooch Pampering</h5>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="http://via.placeholder.com/800x400"
+                        src="/images/dogwash.jpg" width="100"
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5>Baths</h5>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="http://via.placeholder.com/800x400"
-                        alt="Third slide"
+                        src="/images/cucumberDog.jpg" width="100"
+                        alt="Third Slide"
                     />
                     <Carousel.Caption>
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h5>Complete Spa Packages</h5>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
