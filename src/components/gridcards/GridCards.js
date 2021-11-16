@@ -7,20 +7,39 @@ function GridCards(props) {
     return (
         <div className="GridCards container mb-3">
             <Row xs={1} lg={3} className="g-4">
-                {Array.from({ length: 3 }).map((_, idx) => (
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src="http://via.placeholder.com/300" />
+                            <Card.Img variant="top" src="/images/lipstickMonkey.jpg" />
                             <Card.Body>
-                                <Card.Title>Card title</Card.Title>
+                                <Card.Title>Maxine M</Card.Title>
                                 <Card.Text>
-                                    This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.
+                                    The mobile pet grooming business is magnificent.  I'd highly recommend.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
-                ))}
+                    <Col>
+                        <Card>
+                            <Card.Img variant="top" src="/images/martiniDog.png" />
+                            <Card.Body>
+                                <Card.Title>Fernando F.</Card.Title>
+                                <Card.Text>
+                                    Fabulous!!  Relaxing afternoon of pampering.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Card.Img variant="top" src="/images/sloth.png" />
+                            <Card.Body>
+                                <Card.Title>Samantha S.</Card.Title>
+                                <Card.Text>
+                                    This was such an amazing experience.  Very professional.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
             </Row>
         </div>
     );

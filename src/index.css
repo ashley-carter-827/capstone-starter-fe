@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top:100px;
+  padding-top:150px;
+  padding-bottom:200px;
 }
 
 code {
@@ -14,5 +15,5 @@ code {
 }
 
 .navbar-bg-color{
-  background-color:lightpink;
+  background-color:rgb(233, 128, 193);
 }

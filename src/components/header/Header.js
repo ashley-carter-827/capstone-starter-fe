@@ -25,3 +25,4 @@ function Header(props) {
 }
 
 export default withRouter(Header);
+//className="justify-content-center flex-column"
