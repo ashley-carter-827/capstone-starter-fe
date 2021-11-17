@@ -17,3 +17,19 @@ code {
 .navbar-bg-color{
   background-color:rgb(233, 128, 193);
 }
+
+.scheduleApptButton{
+  background-color:rgb(233, 128, 193);
+  border-color: rgb(233, 128, 193);
+  color: black;
+  display: block; 
+  margin: auto
+}
+
+.scheduleApptButton:hover{
+  background-color:rgb(233, 128, 193);
+  border-color: rgb(233, 128, 193);
+  color: lightgray;
+  display: block; 
+  margin: auto
+}

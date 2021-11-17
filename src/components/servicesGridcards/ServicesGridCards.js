@@ -20,16 +20,16 @@ class ServicesGridCards extends Component {
             .catch((error) => {
                 console.log(error)
             });
-    }
+    };
     render() {
         return (
-            <div className="ServicesGridCards container mb-3">
+            <div class ="card" className="ServicesGridCards container mb-3">
                 <Row xs={1} lg={3} className="g-4">
                     {this.state.services.map((service, idx) => (
                         <Col>
                             <Card>
-                                <Card.Img variant="top" src="http://via.placeholder.com/300" />
-                                <Card.Body>
+                                <Card.Img variant="top" src = {`./images/${service.serviceImage}`}/>
+                                <Card.Body class="card text-center">
                                     <Card.Title>{service.serviceName}</Card.Title>
                                     <Card.Text>
                                         <b>Description:</b> {service.serviceDescription}
@@ -39,6 +39,11 @@ class ServicesGridCards extends Component {
                                         <br/>
                                         <br/>
                                         <b>Price:</b> {service.servicePrice}
+                                        <br/>
+                                        <br/>
+                                        <a href="/appointment" class="btn btn-primary">Book Now!</a>
+                                        <br/>
+                                        <br/>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
