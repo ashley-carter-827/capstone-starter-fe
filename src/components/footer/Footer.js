@@ -18,8 +18,14 @@ function Footer(props) {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      {/* <Navbar className="justify-content-center flex-column">
+        <Navbar.Brand>
+          <img src="https://www.clipartmax.com/png/small/21-217566_delivery-van-clipart-png-amp-delivery-van-clip-art-delivery-truck-clipart.png"/>
+        </Navbar.Brand>
+      </Navbar> */}
       <Navbar className="justify-content-end" variant="light" expand="lg" fixed="bottom">
-        <Navbar.Brand><b>Hours</b>
+        <Navbar.Brand>
+          <b>Hours</b>
           <br/>Monday - Friday: 9:00am - 5:30pm
           <br/>Saturday: 9:00am - 2:00pm
           <br/>Sunday: Closed

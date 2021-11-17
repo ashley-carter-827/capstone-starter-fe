@@ -8,6 +8,7 @@ function Home(props) {
     <div className="Home">
         <Header/>
         <Slideshow/>
+        <div class="separator">Customer Testimonials</div>
         <GridCards/>
         <Footer/>
     </div>

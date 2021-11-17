@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Alert from 'react-bootstrap/Alert';
 
 import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 import UserForm from "../../components/userForm/UserForm";
 
@@ -85,6 +86,7 @@ class Register extends Component {
                     handleSubmit={this.handleSubmit}
                     formData={this.state.formData}
                 />
+                <Footer/>
 
             </div>
         )
