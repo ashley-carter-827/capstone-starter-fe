@@ -17,6 +17,7 @@ function AppointmentForm({ handleChange, handleSubmit, formData}) {
                 <Form.Group controlId="appointmentGroomer">
                     <Form.Label><strong>Groomer:</strong></Form.Label>
                     <Form.Control as="select" defaultValue="1" required minLength="2" onChange={handleChange} value={formData.appointmentGroomer} type="text" placeholder="Groomer Name" >
+                        <option>Choose your Groomer</option>
                         <option>All Clean Ashley</option>
                         <option>Do it all Deb</option>
                         <option>Groomer Gabe</option>
