@@ -70,7 +70,7 @@ class Appointment extends Component {
         return (
             <div className="AppointmentForm">
 
-                <Header />
+                <Header isAuthenticated={this.props.isAuthenticated} />
                 <Footer />
 
                 <div className="container">
