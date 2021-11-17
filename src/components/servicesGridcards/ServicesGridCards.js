@@ -23,7 +23,7 @@ class ServicesGridCards extends Component {
     };
     render() {
         return (
-            <div className="ServicesGridCards container mb-3">
+            <div class ="card" className="ServicesGridCards container mb-3">
                 <Row xs={1} lg={3} className="g-4">
                     {this.state.services.map((service, idx) => (
                         <Col>
@@ -41,7 +41,7 @@ class ServicesGridCards extends Component {
                                         <b>Price:</b> {service.servicePrice}
                                         <br/>
                                         <br/>
-                                        <a href="#" class="btn btn-primary">Book Now!</a>
+                                        <a href="/appointment" class="btn btn-primary">Book Now!</a>
                                         <br/>
                                         <br/>
                                     </Card.Text>
