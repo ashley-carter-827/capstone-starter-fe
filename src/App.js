@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 
 import Home from "./pages/home/Home";
-import Protected from "./pages/protected/Protected";
+import Profile from "./pages/profile/Profile";
 import Login from "./pages/login/Login";
 import NotFound from "./pages/notFound/NotFound";
 import Register from "./pages/register/Register";
@@ -40,8 +40,8 @@ function App() {
         />
         <Route
           exact
-          path="/protected"
-          component={Protected}
+          path="/profile"
+          component={Profile}
         />
         <Route
           exact
