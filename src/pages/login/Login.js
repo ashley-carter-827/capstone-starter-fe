@@ -9,6 +9,7 @@ import AuthService from "../../authService";
 import { Redirect, withRouter } from "react-router-dom";
 import LoginForm from "../../components/loginForm/LoginForm";
 import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 class Login extends Component {
 
@@ -69,7 +70,7 @@ class Login extends Component {
                     handleSubmit={this.handleSubmit}
                     formData={this.state.formData}
                 />
-
+                <Footer />
             </div>
         )
     }
