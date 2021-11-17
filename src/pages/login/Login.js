@@ -53,7 +53,7 @@ class Login extends Component {
         const flashMessage = params.get('message');
         if (this.state.success) {
             const redirect = params.get('redirect');
-            return <Redirect to={(redirect) ? redirect : "/protected"} />
+            return <Redirect to={(redirect) ? redirect : "/profile"} />
         }
         return (
             <div className="LoginForm">
