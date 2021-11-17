@@ -25,6 +25,7 @@ code {
   background-color:rgb(233, 128, 193);
 }
 
+
 .separator {
   display: flex;
   align-items: center;
@@ -44,4 +45,20 @@ code {
 
 .separator:not(:empty)::after {
   margin-left: .25em;
+}
+
+.scheduleApptButton{
+  background-color:rgb(233, 128, 193);
+  border-color: rgb(233, 128, 193);
+  color: black;
+  display: block; 
+  margin: auto
+}
+
+.scheduleApptButton:hover{
+  background-color:rgb(233, 128, 193);
+  border-color: rgb(233, 128, 193);
+  color: lightgray;
+  display: block; 
+  margin: auto
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import mustBeAuthenticated from "../../redux/hoc/mustBeAuthenticated";
 import Alert from 'react-bootstrap/Alert';
 
 import { connect } from "react-redux";
@@ -20,6 +21,7 @@ class Appointment extends Component {
             appointmentPetName: "",
             appointmentGroomer: "",
             appointmentServices: "",
+            appointmentLocation: "",
             appointmentDate: "",
             appointmentTime: ""
         }
@@ -35,20 +37,27 @@ class Appointment extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.client.login(this.state.formData).then((response) => {
-            // handle success
-            localStorage.setItem('auth',
-                JSON.stringify({
-                    token: response.data.token,
-                    email: response.data.email
-                })
-            );
-            this.props.actions.login(response.data)
-            this.setState({ success: true })
+        
+        //get API url from the environment variables
+        const apiURL = process.env.REACT_APP_API_URL
+        
+        //use fetch to make a POST request with the Data from state that has been populated from
+        //the data in the form
+        fetch(`${apiURL}/api/appointment`, {
+            method: "POST", //make sure whe set our method to POST when creating records
+            headers: {
+                'content-type': 'application/json' //make sure we set the content-type headers so the API knows it is recieveing JSON data
+            },
+            body: JSON.stringify(this.state.formData) //send our data form state int he body of the request
         })
-            .catch((error) => {
-                this.setState({ errorMessage: "Invalid Username/Password Combination" })
-            })
+        .then((response) => response.json()) // on success, turn the respons into JSON so we can work with it
+        .then((data) => {
+            const message = "Appointment has been successfully scheduled!"
+            //programatically redirect to another route on success
+            this.props.history.push(`/login?message=${message}`)
+        })
+        .catch(e => console.log(e.message)) //console.log any errors if the previous steps fail
+
     }
 
     render() {
@@ -59,7 +68,7 @@ class Appointment extends Component {
             return <Redirect to={(redirect) ? redirect : "/protected"} />
         }
         return (
-            <div className="LoginForm">
+            <div className="AppointmentForm">
 
                 <Header />
                 <Footer />
@@ -80,19 +89,5 @@ class Appointment extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        auth: state.auth,
-    };
-}
 
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(authActions, dispatch)
-    };
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(withRouter(Appointment));
+export default mustBeAuthenticated(Appointment);

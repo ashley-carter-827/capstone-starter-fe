@@ -2,7 +2,7 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-function AppointmentForm({ handleChange, handleSubmit, formData, isUpdate }) {
+function AppointmentForm({ handleChange, handleSubmit, formData}) {
 
     return (
         <div className="AppointmentForm container">
@@ -16,7 +16,7 @@ function AppointmentForm({ handleChange, handleSubmit, formData, isUpdate }) {
                 </Form.Group>
                 <Form.Group controlId="appointmentGroomer">
                     <Form.Label><strong>Groomer:</strong></Form.Label>
-                    <Form.Control as="select" defaultValue="1">
+                    <Form.Control as="select" defaultValue="1" required minLength="2" onChange={handleChange} value={formData.appointmentGroomer} type="text" placeholder="Groomer Name" >
                         <option>All Clean Ashley</option>
                         <option>Do it all Deb</option>
                         <option>Groomer Gabe</option>
@@ -27,6 +27,10 @@ function AppointmentForm({ handleChange, handleSubmit, formData, isUpdate }) {
                     <Form.Label><strong>Service:</strong></Form.Label>
                     <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentServices} type="text" placeholder="Name of Service" />
                 </Form.Group>
+                <Form.Group controlId="appointmentLocation">
+                    <Form.Label><strong>Location:</strong></Form.Label>
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentLocation} type="text" placeholder="Name of Service" />
+                </Form.Group>
                 <Form.Group controlId="appointmentDate">
                     <Form.Label><strong>Date:</strong></Form.Label>
                     <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentDate} type="text" placeholder="Date" />
@@ -36,7 +40,7 @@ function AppointmentForm({ handleChange, handleSubmit, formData, isUpdate }) {
                     <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentTime} type="text" placeholder="Time" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="outline-primary" type="submit" className="scheduleApptButton">
                     Schedule Appointment
                 </Button>
             </Form>
