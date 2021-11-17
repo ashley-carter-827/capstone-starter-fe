@@ -7,8 +7,8 @@ function Slideshow(props) {
             <Carousel variant="dark">
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
-                        src="/images/pawshDog.png" heigth="50" width="100"
+                        className="d-block mx-auto"
+                        src="/images/pawshDog.png"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -17,8 +17,8 @@ function Slideshow(props) {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
-                        src="/images/dogwash.jpg" width="100"
+                        className="d-block mx-auto"
+                        src="/images/DogWash2.png"
                         alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -27,8 +27,8 @@ function Slideshow(props) {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
-                        src="/images/cucumberDog.jpg" width="100"
+                        className="d-block mx-auto"
+                        src="/images/cucumberDog.jpg"
                         alt="Third Slide"
                     />
                     <Carousel.Caption>
