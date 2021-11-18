@@ -18,7 +18,7 @@ class Appointment extends Component {
             appointmentServices: "",
             appointmentLocation: "",
             appointmentDate: new Date(),
-            appointmentTime: ""
+            appointmentTime: new Date()
         }
     }
 
@@ -31,6 +31,12 @@ class Appointment extends Component {
     handleDateChange = (date) => {
         let formData = {...this.state.formData};
         formData.appointmentDate = date
+        this.setState({formData});
+    }
+
+    handleTimeChange = (date) => {
+        let formData = {...this.state.formData};
+        formData.appointmentTime = date
         this.setState({formData});
     }
 
@@ -54,7 +60,7 @@ class Appointment extends Component {
         .then((data) => {
             const message = "Appointment has been successfully scheduled!"
             //programatically redirect to another route on success
-            this.props.history.push(`/login?message=${message}`)
+            this.props.history.push(`/profile?message=${message}`)
         })
         .catch(e => console.log(e.message)) //console.log any errors if the previous steps fail
 
@@ -65,7 +71,7 @@ class Appointment extends Component {
         const flashMessage = params.get('message');
         if (this.state.success) {
             const redirect = params.get('redirect');
-            return <Redirect to={(redirect) ? redirect : "/protected"} />
+            return <Redirect to={(redirect) ? redirect : "/profile"} />
         }
         return (
             <div className="AppointmentForm">

@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import DatePicker from 'react-datepicker';
 
-function AppointmentForm({ handleChange, handleSubmit, formData, handleDateChange}) {
+function AppointmentForm({ handleChange, handleSubmit, formData, handleDateChange, handleTimeChange}) {
 
     return (
         <div className="AppointmentForm container">
@@ -49,11 +49,11 @@ function AppointmentForm({ handleChange, handleSubmit, formData, handleDateChang
                 </Form.Group>
                 <Form.Group controlId="appointmentDate">
                     <Form.Label><strong>Date:</strong></Form.Label>
-                    <DatePicker showTimeSelect selected={formData.appointmentDate} onChange={handleDateChange} dateFormat="yyyy/MM/dd hh:mm"/>
+                    <DatePicker selected={formData.appointmentDate} onChange={handleDateChange} dateFormat="yyyy/MM/dd"/>
                 </Form.Group>
                 <Form.Group controlId="appointmentTime">
                     <Form.Label><strong>Time:</strong></Form.Label>
-                    <DatePicker showTimeSelect selected={formData.appointmentTime} onChange={handleDateChange} dateFormat="yyyy/MM/dd hh:mm"/>
+                    <DatePicker showTimeSelect showTimeSelectOnly selected={formData.appointmentTime} onChange={handleTimeChange} dateFormat="h:mm aa"/>
                 </Form.Group>
 
                 <Button variant="outline-primary" type="submit" className="scheduleApptButton">
