@@ -14,6 +14,12 @@ code {
     monospace;
 }
 
+.card-img-top {
+  width:100%;
+  height: 20vw;
+  object-fit:cover;
+}
+
 .navbar-bg-color{
   background-color:rgb(233, 128, 193);
 }
@@ -32,4 +38,8 @@ code {
   color: lightgray;
   display: block; 
   margin: auto
+}
+
+.img {
+  max-width:100%
 }
