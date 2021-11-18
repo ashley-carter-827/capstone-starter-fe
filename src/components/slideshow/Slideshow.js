@@ -18,11 +18,11 @@ function Slideshow(props) {
                 <Carousel.Item>
                     <img
                         className="d-block mx-auto"
-                        src="/images/DogWash2.png"
+                        src="/images/toothBrushDog.png"
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h5>Baths</h5>
+                        <h5>Brushing Teeth</h5>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
