@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 function GridCards(props) {
 
     return (
-        <div className="GridCards container mb-3">
+        <div className="GridCards container mb-6">
             <Row xs={1} lg={3} className="g-4">
                     <Col>
                         <Card className="h-100">

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck'
 
 class ServicesGridCards extends Component {
     state = {
@@ -23,13 +24,13 @@ class ServicesGridCards extends Component {
     };
     render() {
         return (
-            <div class ="card" className="ServicesGridCards container mb-3">
+            <div className="container mb-3">
                 <Row xs={1} lg={3} className="g-4">
                     {this.state.services.map((service, idx) => (
                         <Col>
-                            <Card>
-                                <Card.Img variant="top" src = {`./images/${service.serviceImage}`}/>
-                                <Card.Body class="card text-center">
+                            <Card className="h-100 mb-5 p-3 d-flex justify-content-between" border="light">
+                                <Card.Img class="img" variant="top" src = {`./images/${service.serviceImage}`}/>
+                                <Card.Body class="text-center">
                                     <Card.Title>{service.serviceName}</Card.Title>
                                     <Card.Text>
                                         <b>Description:</b> {service.serviceDescription}
@@ -41,11 +42,14 @@ class ServicesGridCards extends Component {
                                         <b>Price:</b> {service.servicePrice}
                                         <br/>
                                         <br/>
-                                        <a href="/appointment" class="btn btn-primary">Book Now!</a>
-                                        <br/>
-                                        <br/>
                                     </Card.Text>
                                 </Card.Body>
+                                <Card.Footer class="text-center">
+                                        <br/>
+                                        <a href="/appointment" class="btn btn-dark">Book Now!</a>
+                                        <br/>
+                                        <br/>
+                                </Card.Footer>
                             </Card>
                         </Col>
                     ))}
