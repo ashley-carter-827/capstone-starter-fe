@@ -1,7 +1,6 @@
 //import the boostrap compents we will be using on this form
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import DatePicker from "react-datepicker";
 
 
 function UserForm({ handleChange, handleSubmit, formData, isUpdate }) {
