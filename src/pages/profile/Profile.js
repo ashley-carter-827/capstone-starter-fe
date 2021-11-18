@@ -39,11 +39,20 @@ class Profiles extends Component {
                     {this.state.appointments.map((appointment, idx) => (
                         <Col>
                             <Card className="h-100" border="light">
-                                <Card.Img variant="top" src = "IMAGE.jpg"/>
+                                <Card.Header variant="top">
+                                    {appointment.appointmentDate}
+                                    {appointment.appointmentTime}
+                                </Card.Header>
                                 <Card.Body class="text-center">
-                                    <Card.Title>{appointment.appointmentDate}</Card.Title>
+                                    <Card.Title>{appointment.appointmentPetName}</Card.Title>
                                     <Card.Text>
-                                        <b>Description:</b> {appointment.appointmentTime}
+                                        <b>Groomer:</b> {appointment.appointmentGroomer}
+                                        <br/>
+                                        <br/>
+                                        <b>Location:</b> {appointment.appointmentLocation}
+                                        <br/>
+                                        <br/>
+                                        <b>Services:</b> {appointment.appointmentServices}
                                         <br/>
                                         <br/>
                                     </Card.Text>
