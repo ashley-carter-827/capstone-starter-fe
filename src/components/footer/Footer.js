@@ -19,7 +19,8 @@ function Footer(props) {
         </Navbar.Collapse>
       </Navbar>
       <Navbar className="justify-content-end" variant="light" expand="lg" fixed="bottom">
-        <Navbar.Brand><b>Hours</b>
+        <Navbar.Brand>
+          <b>Hours</b>
           <br/>Monday - Friday: 9:00am - 5:30pm
           <br/>Saturday: 9:00am - 2:00pm
           <br/>Sunday: Closed

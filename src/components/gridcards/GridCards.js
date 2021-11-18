@@ -5,10 +5,10 @@ import Card from 'react-bootstrap/Card';
 function GridCards(props) {
 
     return (
-        <div className="GridCards container mb-3">
+        <div className="GridCards container mb-6">
             <Row xs={1} lg={3} className="g-4">
                     <Col>
-                        <Card>
+                        <Card className="h-100">
                             <Card.Img variant="top" src="/images/lipstickMonkey.jpg" />
                             <Card.Body>
                                 <Card.Title>Maxine M</Card.Title>
@@ -19,8 +19,8 @@ function GridCards(props) {
                         </Card>
                     </Col>
                     <Col>
-                        <Card>
-                            <Card.Img variant="top" src="/images/martiniDog.png" />
+                        <Card className="h-100">
+                            <Card.Img variant="top" src="/images/martiniDog.png"  />
                             <Card.Body>
                                 <Card.Title>Fernando F.</Card.Title>
                                 <Card.Text>
@@ -30,7 +30,7 @@ function GridCards(props) {
                         </Card>
                     </Col>
                     <Col>
-                        <Card>
+                        <Card className="h-100">
                             <Card.Img variant="top" src="/images/sloth.png" />
                             <Card.Body>
                                 <Card.Title>Samantha S.</Card.Title>

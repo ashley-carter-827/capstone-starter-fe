@@ -9,7 +9,7 @@ function Header(props) {
     <div className="Navbar mb-3">
       <Navbar className="navbar-bg-color" variant="light" expand="lg" fixed="top">
         <Navbar.Brand as={Link} to="/">
-          <img src="/pawsitivelyPawshLogo.png" width="400"/>
+          <img src="/pawsitivelyPawshLogo.png" width="400" alt=""/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

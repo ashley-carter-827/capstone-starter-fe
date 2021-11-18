@@ -9,6 +9,7 @@ import AuthService from "../../authService";
 import { Redirect, withRouter } from "react-router-dom";
 import LoginForm from "../../components/loginForm/LoginForm";
 import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 class Login extends Component {
 
@@ -52,7 +53,7 @@ class Login extends Component {
         const flashMessage = params.get('message');
         if (this.state.success) {
             const redirect = params.get('redirect');
-            return <Redirect to={(redirect) ? redirect : "/protected"} />
+            return <Redirect to={(redirect) ? redirect : "/profile"} />
         }
         return (
             <div className="LoginForm">
@@ -69,7 +70,7 @@ class Login extends Component {
                     handleSubmit={this.handleSubmit}
                     formData={this.state.formData}
                 />
-
+                <Footer />
             </div>
         )
     }
