@@ -57,7 +57,7 @@ function UserForm({ handleChange, handleSubmit, formData, isUpdate }) {
                     <Form.Control name="confirmPassword" {...(!isUpdate && {required:true})} type="password" placeholder="Password" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="dark" type="submit">
                     Submit
                 </Button>
             </Form>
