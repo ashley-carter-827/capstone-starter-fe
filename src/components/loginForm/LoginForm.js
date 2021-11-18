@@ -17,7 +17,7 @@ function LoginForm({handleChange, handleSubmit, formData}) {
                         <Form.Label><strong>Password</strong></Form.Label>
                         <Form.Control onChange={handleChange} value={formData.password} type="password" placeholder="Password" />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="dark" type="submit">
                         Submit
                     </Button>
                 </Form>
