@@ -1,5 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, withRouter } from 'react-router-dom';
 
 import { connect } from "react-redux";
@@ -24,6 +25,7 @@ function UserNav(props) {
       })
   }
 
+
   let userNav = (
     <>
         <Navbar.Text className="font-weight-bold mx-3">
@@ -40,9 +42,12 @@ function UserNav(props) {
         <Navbar.Text className="font-weight-bold mx-3">
           Hello, {props.auth.email}
         </Navbar.Text>
-        <Nav.Link as={Link} to="/profile" href="/profile"> View Appointments</Nav.Link>
-        <Nav.Link as={Link} to="/services" href="/services">Service Offerings</Nav.Link>
-        <Nav.Link as={Link} to="/appointment" href="/appointment">Schedule an Appointment</Nav.Link>
+        <Nav.Link as={Link} to={`/updateuser/${props.auth.email}`} href={`/updateuser/${props.auth.email}`}> Edit Profile</Nav.Link>
+        <Nav.Link as={Link} to="/services" href="/services">Services</Nav.Link>
+        <NavDropdown title="Appointment" id="basic-nav-dropdown">
+          <NavDropdown.Item href="/appointment">Schedule Appointment</NavDropdown.Item>
+          <NavDropdown.Item href="/protected">List my Appointments</NavDropdown.Item>
+        </NavDropdown>
         <Nav.Link onClick={handleSignOut}>Sign Out</Nav.Link>
       </>
     )
