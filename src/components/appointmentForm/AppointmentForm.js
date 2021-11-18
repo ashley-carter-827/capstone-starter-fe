@@ -26,11 +26,23 @@ function AppointmentForm({ handleChange, handleSubmit, formData}) {
                 </Form.Group>
                 <Form.Group controlId="appointmentServices">
                     <Form.Label><strong>Service:</strong></Form.Label>
-                    <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentServices} type="text" placeholder="Name of Service" />
+                    <Form.Control as="select" defaultValue="1" required minLength="2" onChange={handleChange} value={formData.appointmentServices} type="text" placeholder="Name of Service" >
+                        <option>Choose your Service</option>
+                        <option>Body Art</option>
+                        <option>Ear Cleaning</option>
+                        <option>Facial</option>
+                        <option>Hairless waxing</option>
+                        <option>Hair/Skin coloring</option>
+                        <option>Mani/Pedi</option>
+                        <option>Massage</option>
+                        <option>Moisturize</option>
+                        <option>Teeth/Fang cleaning</option>
+                        <option>Wash, Dry and Brush</option>
+                    </Form.Control>
                 </Form.Group>
                 <Form.Group controlId="appointmentLocation">
                     <Form.Label><strong>Location:</strong></Form.Label>
-                    <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentLocation} type="text" placeholder="Name of Service" />
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentLocation} type="text" placeholder="Location" />
                 </Form.Group>
                 <Form.Group controlId="appointmentDate">
                     <Form.Label><strong>Date:</strong></Form.Label>
