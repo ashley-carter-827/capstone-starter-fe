@@ -23,11 +23,15 @@ at your home or office in one of our state-of-the-art, fully self-contained mobi
                         <Card className="h-100">
                         <Card.Img variant="top" src="/images/ppBlackPaw.png"  />
                             <Card.Body>
-                                <Card.Title>What to Expect</Card.Title>
+                                <Card.Title>Why Mobile Grooming?</Card.Title>
                                 <Card.Text>
-                                Some of the added conveniences of mobile grooming over a traditional salon include:
-You avoid taking time from your busy schedule to drop off and pick up your pet(s)…We come to You!
-Your pet avoids the stress of traveling in the car and being left in a strange environment.
+                                <li>Mobile grooming offers convience over a traditional salon.
+                                </li>
+                                <li>You avoid taking time from your busy schedule to drop off and pick up your pet(s)…We come to You!
+                                </li>
+                                <li>
+                                Your pet avoids the stress of traveling in the car and being left in a strange environment.
+                                </li>
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -36,13 +40,15 @@ Your pet avoids the stress of traveling in the car and being left in a strange e
                         <Card className="h-100">
                         <Card.Img variant="top" src="/images/dogwash.jpg"  />
                             <Card.Body>
-                                <Card.Title>Meet Our Groomers</Card.Title>
+                                <Card.Title>Our Groomers</Card.Title>
                                 <Card.Text>
-                                Our groomers.
-                                Ashley
-                                Todd
-                                Deb
-                                Gabe
+                                All Clean Ashley
+                                <br></br>
+                                Tailwag Todd
+                                <br></br>
+                                Do it all Deb
+                                <br></br>
+                                Groomer Gabe
                                 </Card.Text>
                             </Card.Body>
                         </Card>
