@@ -10,6 +10,9 @@ function Home(props) {
     <div className="Home">
         <Header isAuthenticated={isAuthenticated()}/>
         <Slideshow/>
+        <br></br>
+        <div class="separator"> Welcome to Pawsitively Pawsh! </div>
+        <br></br>
         <AboutUs/>
         <br></br>
         <div class="separator"> Customer Testimonials </div>
