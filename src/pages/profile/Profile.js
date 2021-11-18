@@ -14,10 +14,8 @@ class Profiles extends Component {
         return (
             <div className="Profile">
                 <Header isAuthenticated={this.props.isAuthenticated} />
-                <h2>User Profile</h2>
-                {
-                    getUserEmail()
-                }
+                <h2>Scheduled Appointments for {getUserEmail()}</h2>
+                
             </div>
             
         );
