@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import * as authActions from "../../redux/actions/auth";
 import { bindActionCreators } from "redux";
 
-import AuthService from "../../authService";
+import {generateAuthHeader} from "../../utils/authHelper";
 import { Redirect, withRouter } from "react-router-dom";
 import AppointmentForm from "../../components/appointmentForm/AppointmentForm";
 import Header from "../../components/header/Header";
@@ -27,8 +27,6 @@ class Appointment extends Component {
         }
     }
 
-    client = new AuthService();
-
     handleChange = (event) => {
         let formData = { ...this.state.formData };
         formData[event.target.id] = event.target.value;
@@ -46,7 +44,8 @@ class Appointment extends Component {
         fetch(`${apiURL}/api/appointment`, {
             method: "POST", //make sure whe set our method to POST when creating records
             headers: {
-                'content-type': 'application/json' //make sure we set the content-type headers so the API knows it is recieveing JSON data
+                'content-type': 'application/json', //make sure we set the content-type headers so the API knows it is recieveing JSON data
+                ...generateAuthHeader()
             },
             body: JSON.stringify(this.state.formData) //send our data form state int he body of the request
         })
