@@ -46,7 +46,7 @@ function UserNav(props) {
         <Nav.Link as={Link} to="/services" href="/services">Services</Nav.Link>
         <NavDropdown title="Appointment" id="basic-nav-dropdown">
           <NavDropdown.Item href="/appointment">Schedule Appointment</NavDropdown.Item>
-          <NavDropdown.Item href="/protected">List my Appointments</NavDropdown.Item>
+          <NavDropdown.Item href="/profile">List my Appointments</NavDropdown.Item>
         </NavDropdown>
         <Nav.Link onClick={handleSignOut}>Sign Out</Nav.Link>
       </>
