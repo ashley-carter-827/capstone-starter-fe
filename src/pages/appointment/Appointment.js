@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import mustBeAuthenticated from "../../redux/hoc/mustBeAuthenticated";
 import Alert from 'react-bootstrap/Alert';
-
-import { connect } from "react-redux";
-import * as authActions from "../../redux/actions/auth";
-import { bindActionCreators } from "redux";
-
 import {generateAuthHeader} from "../../utils/authHelper";
 import { Redirect, withRouter } from "react-router-dom";
 import AppointmentForm from "../../components/appointmentForm/AppointmentForm";
@@ -22,7 +17,7 @@ class Appointment extends Component {
             appointmentGroomer: "",
             appointmentServices: "",
             appointmentLocation: "",
-            appointmentDate: "",
+            appointmentDate: new Date(),
             appointmentTime: ""
         }
     }
@@ -31,6 +26,12 @@ class Appointment extends Component {
         let formData = { ...this.state.formData };
         formData[event.target.id] = event.target.value;
         this.setState({ formData });
+    }
+
+    handleDateChange = (date) => {
+        let formData = {...this.state.formData};
+        formData.appointmentDate = date
+        this.setState({formData});
     }
 
     handleSubmit = (event) => {
@@ -80,6 +81,7 @@ class Appointment extends Component {
                 <AppointmentForm
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
+                    handleDateChange={this.handleDateChange}
                     formData={this.state.formData}
                 />
 

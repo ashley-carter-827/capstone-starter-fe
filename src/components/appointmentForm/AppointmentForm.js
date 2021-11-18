@@ -1,11 +1,14 @@
 //import the boostrap compents we will be using on this form
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import DatePicker from 'react-datepicker';
 
-function AppointmentForm({ handleChange, handleSubmit, formData}) {
+function AppointmentForm({ handleChange, handleSubmit, formData, handleDateChange}) {
 
     return (
         <div className="AppointmentForm container">
+
+            
 
             <br></br>
             <h3 className="text-center" >Schedule Appointment</h3>
@@ -46,11 +49,11 @@ function AppointmentForm({ handleChange, handleSubmit, formData}) {
                 </Form.Group>
                 <Form.Group controlId="appointmentDate">
                     <Form.Label><strong>Date:</strong></Form.Label>
-                    <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentDate} type="text" placeholder="Date" />
+                    <DatePicker showTimeSelect selected={formData.appointmentDate} onChange={handleDateChange} dateFormat="yyyy/MM/dd hh:mm"/>
                 </Form.Group>
                 <Form.Group controlId="appointmentTime">
                     <Form.Label><strong>Time:</strong></Form.Label>
-                    <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentTime} type="text" placeholder="Time" />
+                    <DatePicker showTimeSelect selected={formData.appointmentTime} onChange={handleDateChange} dateFormat="yyyy/MM/dd hh:mm"/>
                 </Form.Group>
 
                 <Button variant="outline-primary" type="submit" className="scheduleApptButton">
