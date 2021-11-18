@@ -5,13 +5,13 @@ import Card from 'react-bootstrap/Card';
 function GridCards(props) {
 
     return (
-        <div className="GridCards container mb-6">
+        <div className="GridCards container mb-3">
             <Row xs={1} lg={3} className="g-4">
                     <Col>
                         <Card className="h-100">
                             <Card.Img variant="top" src="/images/lipstickMonkey.jpg" />
                             <Card.Body>
-                                <Card.Title>Maxine M</Card.Title>
+                                <Card.Title>Maxine M.</Card.Title>
                                 <Card.Text>
                                     The mobile pet grooming business is magnificent.  I'd highly recommend.
                                 </Card.Text>

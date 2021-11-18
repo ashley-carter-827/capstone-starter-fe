@@ -21,7 +21,7 @@ at your home or office in one of our state-of-the-art, fully self-contained mobi
                     </Col>
                     <Col>
                         <Card className="h-100">
-                        <Card.Img variant="top" src="/images/ppBlackPaw.PNG"  />
+                        <Card.Img variant="top" src="/images/ppBlackPaw.png"  />
                             <Card.Body>
                                 <Card.Title>What to Expect</Card.Title>
                                 <Card.Text>
