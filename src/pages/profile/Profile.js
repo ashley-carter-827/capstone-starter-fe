@@ -7,6 +7,9 @@ import {generateAuthHeader} from "../../utils/authHelper";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import { isAuthenticated } from "../../utils/authHelper";
+
+
 const apiURL = process.env.REACT_APP_API_URL
 class Profiles extends Component {
     state = {
@@ -35,13 +38,17 @@ class Profiles extends Component {
     render() {
         return (
             <div className="container mb-3">
+                <Header isAuthenticated={isAuthenticated()}/>
                 <Row xs={1} lg={3} className="g-4">
                     {this.state.appointments.map((appointment, idx) => (
                         <Col>
-                            <Card className="h-100" border="light">
-                                <Card.Header variant="top">
-                                    {appointment.appointmentDate}
-                                    {appointment.appointmentTime}
+                            <Card className="h-100 bg-light mb-5 p-3" border="dark">
+                                <Card.Header class="bg-dark text-light text-center" variant="top">
+                                    <b>
+                                        {appointment.appointmentDate}
+                                    <br/>
+                                        {appointment.appointmentTime}
+                                    </b>
                                 </Card.Header>
                                 <Card.Body class="text-center">
                                     <Card.Title>{appointment.appointmentPetName}</Card.Title>

@@ -2,12 +2,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, withRouter } from 'react-router-dom';
-
 import { connect } from "react-redux";
 import * as authActions from "../../redux/actions/auth";
 import { bindActionCreators } from "redux";
-
-
 import AuthService from "../../authService";
 
 function UserNav(props) {
@@ -24,16 +21,14 @@ function UserNav(props) {
         console.log(error)
       })
   }
-
-
   let userNav = (
     <>
         <Navbar.Text className="font-weight-bold mx-3">
         Welcome, Guest
         </Navbar.Text>
-          <Nav.Link as={Link} to="/login" href="/login">Sign in</Nav.Link>
+          <Nav.Link as={Link} to="/services" href="/services">Services</Nav.Link>
           <Nav.Link as={Link} to="/register" href="/register">Register</Nav.Link>
-          <Nav.Link as={Link} to="/services" href="/services">Service Offerings</Nav.Link>
+          <Nav.Link as={Link} to="/login" href="/login">Sign in</Nav.Link>
     </>
   )
   if (props.isAuthenticated) {
@@ -42,12 +37,12 @@ function UserNav(props) {
         <Navbar.Text className="font-weight-bold mx-3">
           Hello, {props.auth.email}
         </Navbar.Text>
-        <Nav.Link as={Link} to={`/updateuser/${props.auth.email}`} href={`/updateuser/${props.auth.email}`}> Edit Profile</Nav.Link>
         <Nav.Link as={Link} to="/services" href="/services">Services</Nav.Link>
         <NavDropdown title="Appointment" id="basic-nav-dropdown">
           <NavDropdown.Item href="/appointment">Schedule Appointment</NavDropdown.Item>
           <NavDropdown.Item href="/profile">List my Appointments</NavDropdown.Item>
         </NavDropdown>
+        <Nav.Link as={Link} to={`/updateuser/${props.auth.email}`} href={`/updateuser/${props.auth.email}`}> Edit Profile</Nav.Link>
         <Nav.Link onClick={handleSignOut}>Sign Out</Nav.Link>
       </>
     )

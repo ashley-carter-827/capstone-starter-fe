@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top:150px;
@@ -49,22 +49,6 @@ code {
   margin-left: .25em;
 }
 
-.scheduleApptButton{
-  background-color:rgb(233, 128, 193);
-  border-color: rgb(233, 128, 193);
-  color: black;
-  display: block; 
-  margin: auto
-}
-
-.scheduleApptButton:hover{
-  background-color:rgb(233, 128, 193);
-  border-color: rgb(233, 128, 193);
-  color: lightgray;
-  display: block; 
-  margin: auto
-}
-
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a:focus {
   color: #6ecd6e;
@@ -73,5 +57,13 @@ code {
 }
 
 .nav-item a:focus {
+  background-color:rgb(233, 128, 193);
+}
+
+.nav-item a:hover {
+  background-color:rgb(233, 128, 193);
+}
+
+.nav-item a:visited {
   background-color:rgb(233, 128, 193);
 }

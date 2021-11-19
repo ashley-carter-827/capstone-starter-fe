@@ -48,12 +48,12 @@ function UserForm({ handleChange, handleSubmit, formData, isUpdate }) {
                 </Form.Group>
 
                 <Form.Group controlId="password">
-                    <Form.Label><strong>Password</strong></Form.Label>
+                    <Form.Label><strong>Password:</strong></Form.Label>
                     <Form.Control {...(!isUpdate && {required:true})}  onChange={handleChange} value={formData.password} type="password" placeholder="Password" />
                 </Form.Group>
 
                 <Form.Group controlId="confirmPassword">
-                    <Form.Label><strong>Confirm Password</strong></Form.Label>
+                    <Form.Label><strong>Confirm Password:</strong></Form.Label>
                     <Form.Control name="confirmPassword" {...(!isUpdate && {required:true})} type="password" placeholder="Password" />
                 </Form.Group>
 
