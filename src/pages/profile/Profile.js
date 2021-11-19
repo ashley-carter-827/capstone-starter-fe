@@ -36,6 +36,7 @@ class Profiles extends Component {
         })
     };
     render() {
+
         return (
             <div className="container mb-3">
                 <Header isAuthenticated={isAuthenticated()}/>
@@ -45,9 +46,9 @@ class Profiles extends Component {
                             <Card className="h-100 bg-light mb-5 p-3" border="dark">
                                 <Card.Header class="bg-dark text-light text-center" variant="top">
                                     <b>
-                                        {appointment.appointmentDate}
+                                        {(new Date(appointment.appointmentDate)).toLocaleDateString()}
                                     <br/>
-                                        {appointment.appointmentTime}
+                                        {(new Date(appointment.appointmentTime)).toLocaleTimeString([], {hour: '2-digit',minute: '2-digit'})}
                                     </b>
                                 </Card.Header>
                                 <Card.Body class="text-center">

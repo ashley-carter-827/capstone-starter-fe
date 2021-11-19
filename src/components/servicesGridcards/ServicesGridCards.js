@@ -11,8 +11,10 @@ class ServicesGridCards extends Component {
         services: []
     }
     componentDidMount(){
+
+        const apiURL = process.env.REACT_APP_API_URL
         
-        fetch("http://localhost:5000/api/services")
+        fetch(`${apiURL}/api/services`)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)                

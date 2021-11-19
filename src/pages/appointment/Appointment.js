@@ -88,6 +88,7 @@ class Appointment extends Component {
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     handleDateChange={this.handleDateChange}
+                    handleTimeChange={this.handleTimeChange}
                     formData={this.state.formData}
                 />
 
