@@ -9,7 +9,7 @@ function AboutUs(props) {
             <Row xs={1} lg={3} className="g-4">
                     <Col>
                         <Card className="h-100">
-                        <Card.Img variant="top" src="/images/ppVan.png" />
+                        <Card.Img variant="top" src="/images/ppVanLogo.png" />
                             <Card.Body>
                                 <Card.Title>About Us</Card.Title>
                                 <Card.Text>
@@ -21,7 +21,7 @@ at your home or office in one of our state-of-the-art, fully self-contained mobi
                     </Col>
                     <Col>
                         <Card className="h-100">
-                        <Card.Img variant="top" src="/images/ppBlackPaw.png"  />
+                        <Card.Img variant="top" src="/images/ppBlackPawPrint.png"  />
                             <Card.Body>
                                 <Card.Title>Why Mobile Grooming?</Card.Title>
                                 <Card.Text>
@@ -40,17 +40,17 @@ at your home or office in one of our state-of-the-art, fully self-contained mobi
                         <Card className="h-100">
                         <Card.Img variant="top" src="/images/dogwash.jpg"  />
                             <Card.Body>
-                                <Card.Title>Our Groomers</Card.Title>
+                                <Card.Title>Our Services</Card.Title>
                                 <Card.Text>
-                                All Clean Ashley
-                                <br></br>
-                                Tailwag Todd
-                                <br></br>
-                                Do it all Deb
-                                <br></br>
-                                Groomer Gabe
+                                We offer a large selection of services for all of your pets. Massage, Body Art, and Exfoliating are just a few of our services, and no pet to big or small for our crew.
                                 </Card.Text>
                             </Card.Body>
+                            <Card.Footer class="text-center">
+                                        <br/>
+                                        <a href="/services" class="btn btn-dark">View Services</a>
+                                        <br/>
+                                        <br/>
+                            </Card.Footer>
                         </Card>
                     </Col>
             </Row>
