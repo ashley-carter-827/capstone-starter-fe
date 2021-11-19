@@ -1,8 +1,10 @@
+import Header from "../../components/header/Header";
 import React, { Component } from "react";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck'
+import { isAuthenticated } from "../../utils/authHelper";
 
 class ServicesGridCards extends Component {
     state = {
@@ -25,6 +27,7 @@ class ServicesGridCards extends Component {
     render() {
         return (
             <div className="container mb-3">
+                <Header isAuthenticated={isAuthenticated()}/>
                 <Row xs={1} lg={3} className="g-4">
                     {this.state.services.map((service, idx) => (
                         <Col>
