@@ -49,14 +49,14 @@ function AppointmentForm({ handleChange, handleSubmit, formData, handleDateChang
                 </Form.Group>
                 <Form.Group controlId="appointmentDate">
                     <Form.Label><strong>Date:</strong></Form.Label>
-                    <DatePicker selected={formData.appointmentDate} onChange={handleDateChange} dateFormat="yyyy/MM/dd"/>
+                    <DatePicker selected={formData.appointmentDate} onChange={handleDateChange} dateFormat="MM/dd/yyyy"/>
                 </Form.Group>
                 <Form.Group controlId="appointmentTime">
                     <Form.Label><strong>Time:</strong></Form.Label>
                     <DatePicker showTimeSelect showTimeSelectOnly selected={formData.appointmentTime} onChange={handleTimeChange} dateFormat="h:mm aa"/>
                 </Form.Group>
 
-                <Button variant="outline-primary" type="submit" className="scheduleApptButton">
+                <Button variant="dark" type="submit" className="scheduleApptButton">
                     Schedule Appointment
                 </Button>
             </Form>
