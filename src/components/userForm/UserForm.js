@@ -27,7 +27,7 @@ function UserForm({ handleChange, handleSubmit, formData, isUpdate }) {
                 </Form.Group>
                 <Form.Group controlId="streetAddress2">
                     <Form.Label><strong>Street Address2:</strong></Form.Label>
-                    <Form.Control minLength="2" onChange={handleChange} value={formData.streeAddress2} type="text" placeholder="Stree Address2" />
+                    <Form.Control minLength="2" onChange={handleChange} value={formData.streeAddress2} type="text" placeholder="Street Address2" />
                 </Form.Group>
                 <Form.Group controlId="city">
                     <Form.Label><strong>City:</strong></Form.Label>
