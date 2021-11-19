@@ -45,7 +45,13 @@ function AppointmentForm({ handleChange, handleSubmit, formData, handleDateChang
                 </Form.Group>
                 <Form.Group controlId="appointmentLocation">
                     <Form.Label><strong>Location:</strong></Form.Label>
-                    <Form.Control required minLength="2" onChange={handleChange} value={formData.appointmentLocation} type="text" placeholder="Location" />
+                    <Form.Control as="select" defaultValue="1" required minLength="2" onChange={handleChange} value={formData.appointmentLocation} type="text" placeholder="Location">
+                        <option>Choose your Location</option>
+                        <option>Dover, NH</option>
+                        <option>New Orleans, LA</option>
+                        <option>Portland, OR</option>
+                        <option>Wausau, WI</option>
+                    </Form.Control>
                 </Form.Group>
                 <Form.Group controlId="appointmentDate">
                     <Form.Label><strong>Date:</strong></Form.Label>
