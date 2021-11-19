@@ -1,7 +1,8 @@
 import Header from "../../components/header/Header";
 import Slideshow from "../../components/slideshow/Slideshow";
 import GridCards from "../../components/gridcards/GridCards";
-import AboutUs from "../../components/aboutusinfo/AboutUsInfo"
+import AboutUs from "../../components/aboutusinfo/AboutUsInfo";
+import Groomers from "../../components/groomers/Groomers";
 import Footer from "../../components/footer/Footer";
 import { isAuthenticated } from "../../utils/authHelper";
 
@@ -14,6 +15,10 @@ function Home(props) {
         <div class="separator"> Welcome to Pawsitively Pawsh! </div>
         <br></br>
         <AboutUs/>
+        <br></br>
+        <div class="separator"> Meet our Groomers </div>
+        <br></br>
+        <Groomers/>
         <br></br>
         <div class="separator"> Customer Testimonials </div>
         <br></br>
